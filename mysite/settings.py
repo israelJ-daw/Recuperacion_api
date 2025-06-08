@@ -38,13 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'tienda_api',
+    'tienda',
+    'django_bootstrap5',
+    'oauth2_provider',
 ]
 
 #este es para la autenticacion de token
 OAUTH2_PROVIDER = {
-    'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Acceso a los grupos'},
-    "ACCESS_TOKEN_EXPIRE_SECONDS": 5000000000,
+    'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Acceso a los grupos'}
 }
 
 REST_FRAMEWORK = {
@@ -55,8 +56,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),
-    
 }
+
 
 
 MIDDLEWARE = [

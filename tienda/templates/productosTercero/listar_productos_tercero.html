@@ -1,0 +1,15 @@
+{% extends "estructura/principal.html" %}
+{% block contenido %}
+<h1 class="display-3">Listar productos tercero</h1>
+
+<div class="row">
+    {% for producto in listar_productosTercero_Api %}
+    <div class="col-sm-4 mb-2">
+        <p>Nombre de la pieza: {{ producto.nombre }}</p>
+
+    </div>
+    {% empty %}
+    <h1>Lo sentimos pero no hay piezas</h1>
+    {% endfor %}
+</div>
+{% endblock %}

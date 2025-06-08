@@ -1,0 +1,21 @@
+{% extends "estructura/principal.html" %}
+{% block contenido %}
+<h1 class="display-3">Lista de coches</h1>
+
+<div class="row">
+    {% for pieza in listar_pieza_api %}
+    <div class="col-sm-4 mb-2">
+        <p>Nombre de la pieza: {{ pieza.nombre }}</p>
+        <p>Versión: {{ pieza.version }}</p>
+        <p>Referencia: {{ pieza.referencia }}</p>
+        <p>Estado de la pieza: {{ pieza.estado }}</p>
+        <p>Descripcion: {{ pieza.descripcion }}</p>
+        <p>Marca: {{ pieza.marca }}</p>
+        <p>Precio: {{ pieza.precio }}</p>
+        <p>Año: {{ pieza.anio }}</p>
+    </div>
+    {% empty %}
+    <h1>Lo sentimos pero no hay piezas</h1>
+    {% endfor %}
+</div>
+{% endblock %}
